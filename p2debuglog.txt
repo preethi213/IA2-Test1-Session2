@@ -1,0 +1,90 @@
+ gcc -g p2final.c
+ ./a.out
+enter the side of triangle:
+7
+enter the side of triangle:
+8
+enter the side of triangle:
+9
+the triangle with side 7,8 and 9 is scalene
+ gcc -g p2final.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x850: file p2final.c, line 30.
+(gdb) r
+Starting program: /home/runner/IA2-Test1-Session2-3/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p2final.c:30
+30    int AB=input_side();
+(gdb) s
+input_side () at p2final.c:3
+3   {
+(gdb) n
+5     printf("enter the side of triangle:\n");
+(gdb) n
+enter the side of triangle:
+6     scanf("%d",&side);
+(gdb) n
+7
+7     return side;
+(gdb) 8
+Undefined command: "8".  Try "help".
+(gdb) n
+8   }
+(gdb) n
+main () at p2final.c:31
+31    int BC=input_side();
+(gdb) s
+input_side () at p2final.c:3
+3   {
+(gdb) n
+5     printf("enter the side of triangle:\n");
+(gdb) n
+enter the side of triangle:
+6     scanf("%d",&side);
+(gdb) n
+8
+7     return side;
+(gdb) n
+8   }
+(gdb) n
+main () at p2final.c:32
+32    int CA=input_side();
+(gdb) s
+input_side () at p2final.c:3
+3   {
+(gdb) n
+5     printf("enter the side of triangle:\n");
+(gdb) n
+enter the side of triangle:
+6     scanf("%d",&side);
+(gdb) n
+9
+7     return side;
+(gdb) n
+8   }
+(gdb) n
+main () at p2final.c:33
+33    int res=check_scalene(AB,BC,CA);
+(gdb) n
+34    output( AB,BC,CA,res);
+(gdb) n
+the triangle with side 7,8 and 9 is scalene
+35    return 0;
+(gdb) 
