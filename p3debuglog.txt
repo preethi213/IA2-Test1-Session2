@@ -1,5 +1,4 @@
-gcc -g p3final.c
- gdb a.out
+gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -32,14 +31,33 @@ input_number () at p3final.c:3
 enter the number
 6     scanf("%d",&num);
 (gdb) n
-9
+8 
 7     return num;
 (gdb) n
 8   }
 (gdb) n
 main () at p3final.c:28
 28    int res=is_composite(num);
+(gdb) s
+is_composite (n=8) at p3final.c:11
+11    for(int i=2;i<=n/2;i++)
 (gdb) n
+13      if(n%i==0)
+(gdb) n
+14      return 1;
+(gdb) n
+17  }
+(gdb) n
+main () at p3final.c:29
 29    output(num,res);
+(gdb) s
+output (n=8, composite=1) at p3final.c:21
+21    printf("%d is a composite number\n",n);
 (gdb) n
-9 is a composite number
+8 is a composite number
+24  }
+(gdb) n
+main () at p3final.c:31
+31    return 0;
+(gdb) n
+(gdb) 
