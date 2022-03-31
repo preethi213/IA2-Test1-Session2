@@ -1,12 +1,12 @@
 #include<stdio.h>
-void input(float*base,float*height)
+void input(float *base,float *height)
 {
-  printf("enter the base and height of the triangle:\n");
+  printf("enter the number:\n");
   scanf("%f%f",base,height);
 }
-void find_area(float base,float height,float area)
+void find_area(float base,float height,float *area)
 {
-  area=0.5*base*height;
+  *area=0.5*base*height;
 }
 void output(float base,float height,float area)
 {
@@ -14,10 +14,10 @@ void output(float base,float height,float area)
 }
 int main()
 {
-  float base,height;
-  input(&base,&height);
+  float b,h;
+  input(&b,&h);
   float area;
-  find_area(base,height,area);
-  output(base,height,area);
+  find_area(b,h,&area);
+  output(b,h,area);
   return 0;
 }

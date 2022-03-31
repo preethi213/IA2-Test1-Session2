@@ -2,7 +2,7 @@
 int input_array_size()
 {
   int length;
-  printf("enter the length of array:\n;");
+  printf("enter the length of array:\n");
   scanf("%d",&length);
   return length;
 }
@@ -41,10 +41,10 @@ void output(int sum)
 }
 int main()
 {
-  int length=input_array_size();
-  int data[length];
-  input_array(length,data);
-  int res=sum_composite_numbers(length,data);
+  int l=input_array_size();
+  int data[l];
+  input_array(l,data);
+  int res=sum_composite_numbers(l,data);
   output(res);
   return 0;
 }

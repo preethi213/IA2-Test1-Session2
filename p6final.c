@@ -23,10 +23,10 @@ void output(char *a,char *reverse_a)
 }
 int main()
 {
-  char str[10];
-  input_string(str);
+  char s[10];
+  input_string(s);
   char rev_str[10];
-  str_reverse(str,rev_str);
-  output(str,rev_str);
+  str_reverse(s,rev_str);
+  output(s,rev_str);
   return 0;
 }

@@ -27,10 +27,10 @@ void output(int a,int b,int c,int isscalene)
 }
 int main()
 {
-  int AB=input_side();
-  int BC=input_side();
-  int CA=input_side();
-  int res=check_scalene(AB,BC,CA);
-  output( AB,BC,CA,res);
+  int x =input_side();
+  int  y =input_side();
+  int z =input_side();
+  int res=check_scalene(x,y,z);
+  output( x,y,z,res);
   return 0;
 }

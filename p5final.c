@@ -34,9 +34,9 @@ printf("the gcd of %d and %d is %d",a,b,gcd);
 
 int main()
 {
-int num1=input();
-int num2=input();
-int res=gcd(num1,num2);
-output(num1,num2,res);
+int n1=input();
+int n2=input();
+int res=gcd(n1,n2);
+output(n1,n2,res);
 return 0;
 }
